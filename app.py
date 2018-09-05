@@ -5,13 +5,19 @@ app = Flask(__name__)
 api = Api(app)
 
 quests = []
-ans = {}
+
+def give_id(list):
+	output = {}
+	for each in list:
+		output.update({list.index(each)+1:each})
+	return output
 
 class question(Resource):
 	def post(self):
 		question = request.get_json()['question']
 		quests.append(question)
-		return jsonify({'message':'question successfully posted'})
+		return jsonify(question)
+		
 
 api.add_resource(question, '/stackoverflow.com/api/v1/question/')
 
