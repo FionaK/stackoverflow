@@ -21,7 +21,11 @@ class question(Resource):
 	def get(self):
 		return jsonify(give_id(quests))	
 		
+class questionId(Resource):
+	def get(self, id):
+		return jsonify(give_id(quests)[id])
+				
 api.add_resource(question, '/stackoverflow.com/api/v1/question/')
-
+api.add_resource(questionId, '/stackoverflow.com/api/v1/questionId/<int:id>')
 if __name__ == '__main__':
 	app.run(debug=True)
