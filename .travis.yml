@@ -10,7 +10,7 @@ install:
 before_script:
   - cd tests
 script:
-- pytest tests
+- pytest
 - pytest --cov=app
 
 after_success:
