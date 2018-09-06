@@ -11,7 +11,7 @@ before_script:
   - cd tests
 script:
 - pytest
-- pytest --cov=.
+- pytest --cov=App
 
 after_success:
  - coveralls
