@@ -6,6 +6,7 @@ from App import app
 api = Api(app)
 
 class answer(Resource):
+	
 	def post(self, id):
 		try:
 			answer = request.get_json()['answer'].strip()
