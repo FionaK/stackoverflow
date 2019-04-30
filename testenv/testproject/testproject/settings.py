@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'testapp'
 ]
 
 MIDDLEWARE = [
@@ -76,8 +77,8 @@ WSGI_APPLICATION = 'testproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.path.join(''),
-        'USER': '',
+        'NAME': os.path.join('testdb'),
+        'USER': os.path.join(''),
         'PASSWORD': '',
         'HOST': '',
         'PORT': ''
